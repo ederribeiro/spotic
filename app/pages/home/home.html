@@ -1,4 +1,4 @@
-<ion-navbar *navbar>
+<ion-navbar *navbar dark>
     <ion-title>
         Spotic
     </ion-title>
@@ -12,7 +12,7 @@
         </ion-item>
     </ion-list>
     <div padding>
-        <button block (click)="getMusic()">Search</button>
+        <button block (click)="getMusic()" dark>Search</button>
     </div>
     <ion-card *ngFor="#repo of news">
         <ion-card-header>
