@@ -1,0 +1,25 @@
+<ion-navbar *navbar>
+    <ion-title>
+        Spotic
+    </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+    <ion-list inset>
+        <ion-item>
+            <ion-label>Music</ion-label>
+            <ion-input [(ngModel)]="music" type="text"></ion-input>
+        </ion-item>
+    </ion-list>
+    <div padding>
+        <button block (click)="getMusic()">Search</button>
+    </div>
+    <ion-card *ngFor="#repo of news">
+        <ion-card-header>
+            {{ repo.name }}
+        </ion-card-header>
+        <ion-card-content>
+            {{ repo.album.name }}
+        </ion-card-content>
+    </ion-card>
+</ion-content>
